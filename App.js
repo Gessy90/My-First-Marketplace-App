@@ -3,9 +3,8 @@ import {View} from 'react-native';
 
 
 export default function App() {
-  //if items overflow across the main axis, one or more items get shrunk so that others can fit on the screen and that's why we use flex-wrap + alignContent
-  //alignItems determines the alignment of items within each line
-  //alignContent determines the alignment of the entire CONTENT!!!! (this only works with wrapping)
+//in react native all components by deafult have their position set to relative.
+//if I change the position to absolute, I can move a component relative to its parents
   return (
   <View
     style = {{
@@ -23,7 +22,7 @@ export default function App() {
       style = {{
         backgroundColor:"dodgerblue",
         width: 100,
-        height: 300,
+        height: 100,
       }}
     />
 
@@ -32,6 +31,9 @@ export default function App() {
         backgroundColor:"gold",
         width: 100,
         height: 100,
+        top: 20,
+        left: 20,
+        position: "absolute"
       }}
     />
 
@@ -43,21 +45,6 @@ export default function App() {
       }}
     />
 
-    <View
-      style = {{
-        backgroundColor:"grey",
-        width: 100,
-        height: 100,
-      }}
-    />
-
-    <View
-      style = {{
-        backgroundColor:"green",
-        width: 100,
-        height: 100,
-      }}
-    />
   </View>
   );
 }
