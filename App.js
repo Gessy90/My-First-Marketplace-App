@@ -3,7 +3,9 @@ import {View} from 'react-native';
 
 
 export default function App() {
-  //the views are laid out VERTICALLY in a column, because that makes more sense in a mobile app. Usually we use our mobile in portrait mode
+  //if items overflow across the main axis, one or more items get shrunk so that others can fit on the screen and that's why we use flex-wrap + alignContent
+  //alignItems determines the alignment of items within each line
+  //alignContent determines the alignment of the entire CONTENT!!!! (this only works with wrapping)
   return (
   <View
     style = {{
@@ -11,7 +13,9 @@ export default function App() {
       flex: 1,
       flexDirection: "row", //horizontal axis
       justifyContent: "center", //main/primary axis
-      alignItems: "center" //secondary axis
+      alignItems: "center",
+      alignContent: "center", //secondary axis
+      flexWrap: "wrap"
     }}
   >
 
@@ -20,7 +24,6 @@ export default function App() {
         backgroundColor:"dodgerblue",
         width: 100,
         height: 300,
-        alignSelf: "flex-start"
       }}
     />
 
@@ -28,13 +31,29 @@ export default function App() {
       style = {{
         backgroundColor:"gold",
         width: 100,
-        height: 200,
+        height: 100,
       }}
     />
 
     <View
       style = {{
         backgroundColor:"tomato",
+        width: 100,
+        height: 100,
+      }}
+    />
+
+    <View
+      style = {{
+        backgroundColor:"grey",
+        width: 100,
+        height: 100,
+      }}
+    />
+
+    <View
+      style = {{
+        backgroundColor:"green",
         width: 100,
         height: 100,
       }}
