@@ -15,13 +15,15 @@ import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
 import ListingScreen from './app/screens/ListingScreen';
 import AppTextInput from './app/components/AppTextInput';
+import AppPicker from './app/components/AppPicker';
 
 
 export default function App() {
   // const [firstName, setFirstName] = useState('');
 return (
   <Screen>
-    <AppTextInput placeholder="Username" icon="email"/>
+    <AppPicker icon="apps" placeholder="Category"/>
+    <AppTextInput icon="email" placeholder="Email"/>
   </Screen>
 )
 }
