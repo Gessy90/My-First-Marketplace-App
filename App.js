@@ -11,15 +11,14 @@ import Icon from "./app/components/Icon";
 import colors from './app/config/colors';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import MessagesScreen from './app/screens/MessagesScreen';
+import ListItem from './app/components/ListItem';
+import AccountScreen from './app/screens/AccountScreen';
 
 
 export default function App() {
-return < Screen>
-  <Icon
-    name="email"
-    size={100}
-  />
-</Screen>
+return (
+  <AccountScreen />
+)
 }
 
 
