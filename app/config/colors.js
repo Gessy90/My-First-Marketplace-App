@@ -4,5 +4,5 @@ export default {
     black: "#000",
     white: "#fff",
     cardText: "#c97c7b",
-    medium: "#6e6969"
+    medium: "#6e6969",
 }

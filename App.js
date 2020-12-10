@@ -8,10 +8,11 @@ import AppButton from './app/components/AppButton';
 import Card from "./app/components/Card";
 import colors from './app/config/colors';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
+import MessagesScreen from './app/screens/MessagesScreen';
 
 
 export default function App() {
-return < ViewImageScreen />;
+return < MessagesScreen />;
 }
 
 
