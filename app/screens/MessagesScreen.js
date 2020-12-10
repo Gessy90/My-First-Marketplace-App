@@ -1,10 +1,11 @@
-import React from 'react';
-import{ FlatList, StyleSheet, View} from 'react-native';
-import ListItems from '../components/ListItems';
+import React, {useState} from 'react';
+import{ FlatList} from 'react-native';
+import ListItemDeleteAction from '../components/ListItemDeleteAction';
+import ListItem from "../components/ListItem";
 import ListItemSeparator from '../components/ListItemSeparator';
 import Screen from '../components/Screen';
 
-const messages = [
+const initialMessages = [
     {
         id: 1,
         title: 'T1',
@@ -19,25 +20,38 @@ const messages = [
     }
 ]
 function MessagesScreen(props) {
-    return (
-        <Screen>
-        <FlatList
-            data={messages}
-            keyExtractor={ message => message.id.toString()}
-            renderItem= {({item}) => (
-                <ListItems
-                title= {item.title}
-                subtitle= {item.subtitle}
-                image= {item.image}
-                />
-            )}
-            ItemSeparatorComponent={ListItemSeparator}
-        />
-        </Screen>
-    );
-}
+    const [messages, setMessages] = useState(initialMessages);
 
-const styles = StyleSheet.create({
-})
+    const handleDelete = (message) => {
+      // Delete the message from our messages array
+      //we are using a hook here.
+      //A hook is a function that allows us to hook into react features in function components
+      const newMessages = messages.filter((m) => m.id !== message.id);
+      setMessages(newMessages);
+    };
+
+    return (
+      <Screen>
+        <FlatList
+          data={messages}
+          keyExtractor={(message) => message.id.toString()}
+          renderItem={({ item }) => (
+            <ListItem
+              title={item.title}
+              subTitle={item.description}
+              image={item.image}
+              onPress={() => console.log("Message selected", item)}
+              renderRightActions={() => (
+                <ListItemDeleteAction onPress={() => handleDelete(item)}
+                />
+              )}
+            />
+          )}
+          ItemSeparatorComponent={ListItemSeparator}
+        />
+      </Screen>
+    );
+  }
+
 
 export default MessagesScreen;
