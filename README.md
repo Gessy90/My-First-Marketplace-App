@@ -33,7 +33,6 @@ A marketplace app that helps you connect with others and that facilitate the buy
 ![AccountScreen](https://user-images.githubusercontent.com/42389173/101990442-f7832b00-3c9e-11eb-9f85-4e9e1724ad43.jpeg)
 
 4. If the user would like to see their listings they can click on the listings button and this page will appear.
-
 ![ListingScreen](https://user-images.githubusercontent.com/42389173/101990781-4e3d3480-3ca0-11eb-90db-feb9c3b8240e.jpeg)
 
 5. To see the details of the listings the user can click on the item and more information will appear about the product.
