@@ -39,7 +39,7 @@ A marketplace app that helps you connect with others and that facilitate the buy
 ![ListingDetailsScreen](https://user-images.githubusercontent.com/42389173/101990875-e9cea500-3ca0-11eb-9d03-2f47c17a892d.jpeg)
 
 6. The user will be able to edit the listing or post a new one. 
-![ListingEditScreen](https://user-images.githubusercontent.com/42389173/101990989-9446c800-3ca1-11eb-8248-5055d5e4f4e9.jpeg)
+![ListingEditScreen](https://user-images.githubusercontent.com/42389173/101991478-d291b680-3ca4-11eb-9555-5f6a422d986d.jpeg)
 
 7. When they click on the Category dropdown button a list of options will appear so that the user will be able to make the right selection.
 ![Categories in ListingEditScreen](https://user-images.githubusercontent.com/42389173/101990993-9f015d00-3ca1-11eb-97e1-9b8d93ac41d4.jpeg)
