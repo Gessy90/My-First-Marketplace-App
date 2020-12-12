@@ -9,6 +9,7 @@ import * as Yup from "yup";
 import AppText from '../components/AppText';
 import ErrorMessage from '../components/ErrorMessage';
 import AppFormField from '../components/AppFormField';
+import SubmitButton from '../components/SubmitButton';
 
 //using Yup for validations so that we can validate the email address and the password
 //I've set up the password to have at least 5 characters
@@ -29,7 +30,7 @@ function LoginScreen(props){
                 onSubmit = { values => console.log(values)}
                 validationSchema = {validationSchema}
             >
-                {({ handleChange, handleSubmit, errors, setFieldTouched, touched}) => (
+                {() => (
                     <>
                         <AppFormField
                             name="email"
@@ -49,8 +50,7 @@ function LoginScreen(props){
                             textContentType="password"
                             secureTextEntry={true}
                         />
-                        <AppButton title="Login" onPress={handleSubmit}
-                        />
+                        <SubmitButton title="Login" />
                     </>
                 )}
             </Formik>
