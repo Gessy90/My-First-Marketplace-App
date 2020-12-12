@@ -1,4 +1,4 @@
-# My-First-Marketplace-App: Ted Baker Second Hand Clothes - a marketplace app for people who want to buy and sell Ted Baker clothing items
+# My-First-Marketplace-App: Ted Baker Second Hand Clothes
 
 ## Goal: To create an app with React Native.
 
@@ -12,7 +12,7 @@
 * Yup
 * Git / GitHub
 
-# My App: Ted Baker Second Hand Clothes
+# My App: Ted Baker Second Hand Clothes - a marketplace app for people who want to buy and sell Ted Baker clothing items
 ![WelcomeScreen](https://user-images.githubusercontent.com/42389173/101990202-7a0aeb00-3c9d-11eb-80fc-24da4b359a25.jpeg)
 A hosted version of this app can be found on Expo at https://expo.io/@gessy/projects/my-app
 
