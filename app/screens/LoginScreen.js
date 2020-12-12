@@ -4,9 +4,10 @@ import AppButton from '../components/AppButton';
 import AppTextInput from '../components/AppTextInput';
 import Screen from "../components/Screen";
 import colors from "../config/colors";
-import { Formik } from 'formik'
+import { Formik } from 'formik';
 import * as Yup from "yup";
 import AppText from '../components/AppText';
+import ErrorMessage from '../components/ErrorMessage';
 
 //using Yup for validations so that we can validate the email address and the password
 //I've set up the password to have at least 5 characters
@@ -38,7 +39,7 @@ function LoginScreen(props){
                             textContentType="emailAddress"
                             onChangeText={handleChange("email")}
                         />
-                        <AppText style={{color:"red"}}>{errors.email}</AppText>
+                       <ErrorMessage error={errors.email}></ErrorMessage>
                         <AppTextInput
                             autoCapitalize="none"
                             autoCorrect= {false}
@@ -48,7 +49,7 @@ function LoginScreen(props){
                             secureTextEntry={true}
                             onChangeText={handleChange("password")}
                         />
-                        <AppText style={{color:"red"}}>{errors.password}</AppText>
+                        <ErrorMessage error={errors.password}></ErrorMessage>
                         <AppButton title="Login" onPress={handleSubmit}
                         />
                     </>
