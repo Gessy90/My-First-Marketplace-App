@@ -6,7 +6,7 @@ import AppText from './AppText';
 import Screen from "./Screen";
 import PickerItem from './PickerItem';
 
-function AppPicker({icon,placeholder,items, onSelectItem,selectedItem}) {
+function AppPicker({icon,placeholder,items,PickerItemComponent=PickerItem ,onSelectItem,numberOfColumns=1,selectedItem}) {
     const [modalVisible, setModalVisible] = useState(false);
     return (
         //you can't have 2 components Modal and TouchableWithoutFeedback from our function component that's why we use React.Fragment
@@ -38,9 +38,11 @@ function AppPicker({icon,placeholder,items, onSelectItem,selectedItem}) {
                     <Button title="Close" color={colors.black} onPress={() => setModalVisible(false)}/>
                     <FlatList
                         data= {items}
+                        numColumns={numberOfColumns}
                         keyExtractor={ item => item.value.toString()}
                         renderItem={({item}) => (
-                            <PickerItem
+                            <PickerItemComponent
+                                item={item}
                                 label={item.label}
                                 onPress={() => {
                                     setModalVisible(false);
