@@ -28,6 +28,7 @@
     "web": {
       "favicon": "./app/assets/favicon.png"
     },
-    "description": "A marketplace for selling things that you don't need anymore"
+    "description": "A marketplace for selling things that you don't need anymore",
+    "githubUrl": "https://github.com/Gessy90/My-First-Marketplace-App"
   }
 }

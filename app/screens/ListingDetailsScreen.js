@@ -27,16 +27,16 @@ const styles = StyleSheet.create({
     image: {
         width: "100%",
         height: 300,
-        // marginTop: 20
+        marginTop: 20
     },
     detailsContainer:{
         padding: 20
     },
     title:{
-      fontSize: 24,
-      fontWeight: "500",
-      color: colors.cardText,
-      fontWeight: "bold",
+        fontSize: 24,
+        fontWeight: "500",
+        color: colors.cardText,
+        fontWeight: "bold",
     },
     price:{
         color:colors.cardText,
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
         marginVertical: 10
     },
     userContainer:{
-        marginVertical: 20
+        marginVertical: 20,
     }
 })
 export default ListingDetailsScreen;

@@ -8,14 +8,14 @@ import Screen from '../components/Screen';
 const initialMessages = [
     {
         id: 1,
-        title: 'T1',
-        description: 'D1',
+        title: 'Maria',
+        description: 'Hi! Is this item still available?',
         image: require("../assets/avatar.jpg")
     },
     {
         id: 2,
-        title: 'T2',
-        description: 'D2',
+        title: 'Maria',
+        description: 'Hi, I love it! Can you please let me know when will you be able to post it?',
         image: require("../assets/avatar.jpg")
     }
 ]
