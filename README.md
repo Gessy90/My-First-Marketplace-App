@@ -26,7 +26,7 @@ A marketplace app that helps you connect with others and that facilitate the buy
 ![WelcomeScreen](https://user-images.githubusercontent.com/42389173/101990202-7a0aeb00-3c9d-11eb-80fc-24da4b359a25.jpeg)
 
 2. When the user clicks on Login they would need to enter their email address and password. This will validate their credential and it will bring them onto the account page.
-![LoginScreen](https://user-images.githubusercontent.com/42389173/101990661-f272ab80-3c9f-11eb-8db1-737d420283bd.jpeg)
+![Login](https://user-images.githubusercontent.com/42389173/101991357-1b953b00-3ca4-11eb-828b-73af117976fc.jpeg)
 
 3. Once on the account page, they will be able to see their profile with their listings,messages and a log out button is provided to sign out.
 
