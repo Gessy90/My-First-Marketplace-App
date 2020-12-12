@@ -8,6 +8,7 @@ import { Formik } from 'formik';
 import * as Yup from "yup";
 import AppText from '../components/AppText';
 import ErrorMessage from '../components/ErrorMessage';
+import AppFormField from '../components/AppFormField';
 
 //using Yup for validations so that we can validate the email address and the password
 //I've set up the password to have at least 5 characters
@@ -30,28 +31,24 @@ function LoginScreen(props){
             >
                 {({ handleChange, handleSubmit, errors, setFieldTouched, touched}) => (
                     <>
-                        <AppTextInput
+                        <AppFormField
+                            name="email"
                             icon="email"
                             autoCapitalize="none"
                             autoCorrect= {false}
                             placeholder= "Email"
                             keyboardType= "email-address"
                             textContentType="emailAddress"
-                            onChangeText={handleChange("email")}
-                            onBlur={() => setFieldTouched("email")}
                         />
-                       <ErrorMessage error={errors.email} visible={touched.email}></ErrorMessage>
-                        <AppTextInput
+                        <AppFormField
+                            name="password"
                             autoCapitalize="none"
                             autoCorrect= {false}
                             placeholder= "Password"
                             icon="lock"
                             textContentType="password"
                             secureTextEntry={true}
-                            onChangeText={handleChange("password")}
-                            onBlur={() => setFieldTouched("password")}
                         />
-                        <ErrorMessage error={errors.password} visible={touched.password}></ErrorMessage>
                         <AppButton title="Login" onPress={handleSubmit}
                         />
                     </>
